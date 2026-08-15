@@ -21,3 +21,20 @@ Supports:
 - C
 - GCC
 - Visual Studio Code
+
+## How to Run
+
+Compile the calculator using GCC:
+
+```bash
+gcc calculator.c -o calculator
+./calculator
+
+## What I Learned
+
+- if-else statements
+- do-while loops
+- input handling
+- type casting
+- error handling
+- basic Git and GitHub workflow
