@@ -13,7 +13,8 @@ int main(){
     char choice[10];
     float ans;
 
-
+    printf("=====CALCULATOR=====");
+    printf("\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Power\n6. Modulo\n");
     do{
         int valid=1;
 
@@ -24,16 +25,18 @@ int main(){
         printf("Enter 2nd operant: ");
         scanf("%f",&oparant2);
 
-        if (oparator=='+'){
-            ans= oparant1+oparant2;
-        }
-        else if (oparator=='-'){
-            ans= oparant1-oparant2;
-        }
-        else if (oparator=='*'){
-            ans= oparant1*oparant2;
-        }
-        else if (oparator=='/'){
+        switch (oparator)
+        {
+        case '+':
+            ans = oparant1+oparant2;
+            break;
+        case '-':
+            ans = oparant1-oparant2;
+            break;
+        case '*':
+            ans = oparant1-oparant2;
+            break;
+        case '/':
             if(oparant2==0){
                 printf("\nCannot divide by zero!\n");
                 valid=0;
@@ -41,11 +44,11 @@ int main(){
             else{
                 ans= oparant1/oparant2;
             }
-        }
-        else if (oparator=='^'){
+            break;
+        case '^':
             ans= pow(oparant1,oparant2);
-        }
-        else if (oparator=='%'){
+            break;
+        case '%':
             if(oparant2==0){
                 printf("\nCannot perform modulo by zero!\n");
                 valid=0;
@@ -53,8 +56,8 @@ int main(){
             else{
                 ans= (int)oparant1%(int)oparant2;
             }
-        }
-        else{
+            break;
+        default:
             printf("\nInvalid operators! Please try again.");
             valid=0;
         }
