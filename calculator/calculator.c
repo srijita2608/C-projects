@@ -8,53 +8,53 @@ Includes error handling for division/modulo by zero.
 #include <math.h>
 #include <string.h>
 int main(){
-    float oparant1, oparant2;
-    char oparator;
+    float operand1, operand2;
+    char operator;
     char choice[10];
     float ans;
 
     printf("=====CALCULATOR=====");
-    printf("\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Power\n6. Modulo\n");
+    printf("\n+ Addition\n- Subtraction\n* Multiplication\n/ Division\n^ Power\n%% Modulo\n");
     do{
         int valid=1;
 
         printf("\nEnter 1st operant: ");
-        scanf("%f",&oparant1);
+        scanf("%f",&operand1);
         printf("Select an operator: ");
-        scanf("%c",&oparator);
+        scanf(" %c",&operator);
         printf("Enter 2nd operant: ");
-        scanf("%f",&oparant2);
+        scanf("%f",&operand2);
 
-        switch (oparator)
+        switch (operator)
         {
         case '+':
-            ans = oparant1+oparant2;
+            ans = operand1+operand2;
             break;
         case '-':
-            ans = oparant1-oparant2;
+            ans = operand1-operand2;
             break;
         case '*':
-            ans = oparant1*oparant2;
+            ans = operand1*operand2;
             break;
         case '/':
-            if(oparant2==0){
+            if(operand2==0){
                 printf("\nCannot divide by zero!\n"); 
                 valid=0;
             }
             else{
-                ans= oparant1/oparant2;
+                ans= operand1/operand2;
             }
             break;
         case '^':
-            ans= pow(oparant1,oparant2);
+            ans= pow(operand1,operand2);
             break;
         case '%':
-            if(oparant2==0){
+            if(operand2==0){
                 printf("\nCannot perform modulo by zero!\n");
                 valid=0;
             }
             else{
-                ans= (int)oparant1%(int)oparant2;
+                ans= (int)operand1%(int)operand2;
             }
             break;
         default:
@@ -63,14 +63,11 @@ int main(){
         }
 
         if (valid){
-            printf("\nAns: %.2f %c %.2f = %.2f", oparant1, oparator, oparant2, ans);
+            printf("\nAns: %.2f %c %.2f = %.2f", operand1, operator, operand2, ans);
         }
 
         printf("\n\nDo you want to calculate again? \n");
-        getchar();
-        fgets(choice,10,stdin);
-
-        choice[strcspn(choice,"\n")]='\0';
+        scanf("%s", choice);
 
     } while(strcasecmp(choice, "yes") == 0);
 
