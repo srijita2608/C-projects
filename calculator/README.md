@@ -5,9 +5,11 @@ A collection of my C programming practice and projects.
 ## Projects
 
 ### Calculator
+
 A simple calculator built in C.
 
 Supports:
+
 - Addition
 - Subtraction
 - Multiplication
@@ -38,3 +40,4 @@ gcc calculator.c -o calculator
 - type casting
 - error handling
 - basic Git and GitHub workflow
+```

@@ -34,7 +34,7 @@ int main(){
             ans = oparant1-oparant2;
             break;
         case '*':
-            ans = oparant1-oparant2;
+            ans = oparant1*oparant2;
             break;
         case '/':
             if(oparant2==0){
