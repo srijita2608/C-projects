@@ -55,6 +55,7 @@ int main(){
         break;
         default:
         printf("\n Invalid month!\n");
+        return 0;
     }
     printf("\n\n");
     printf("\t\t\t Month: %d 2027\n\n", monthnum);
