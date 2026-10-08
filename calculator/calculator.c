@@ -18,11 +18,11 @@ int main(){
     do{
         int valid=1;
 
-        printf("\nEnter 1st operant: ");
+        printf("\nEnter 1st operand: ");
         scanf("%f",&operand1);
         printf("Select an operator: ");
         scanf(" %c",&operator);
-        printf("Enter 2nd operant: ");
+        printf("Enter 2nd operand: ");
         scanf("%f",&operand2);
 
         switch (operator)
