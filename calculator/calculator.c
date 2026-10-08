@@ -20,8 +20,8 @@ int main(){
 
         printf("\nEnter 1st operant: ");
         scanf("%f",&oparant1);
-        printf("Enter operator: ");
-        scanf(" %c",&oparator);
+        printf("Select an operator: ");
+        scanf("%c",&oparator);
         printf("Enter 2nd operant: ");
         scanf("%f",&oparant2);
 
@@ -38,7 +38,7 @@ int main(){
             break;
         case '/':
             if(oparant2==0){
-                printf("\nCannot divide by zero!\n");
+                printf("\nCannot divide by zero!\n"); 
                 valid=0;
             }
             else{
