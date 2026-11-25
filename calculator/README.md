@@ -15,8 +15,14 @@ Supports:
 - Multiplication
 - Division
 - Power
-- Modulo
-- Division/modulo by zero error handling
+- Modulo (works with decimals)
+
+Error handling for:
+
+- Division/modulo by zero
+- Invalid number input
+- Invalid operators
+- Invalid power operations (NaN/infinity)
 
 ## Technologies
 
@@ -29,15 +35,16 @@ Supports:
 Compile the calculator using GCC:
 
 ```bash
-gcc calculator.c -o calculator
+gcc calculator.c -o calculator -lm
 ./calculator
+```
 
 ## What I Learned
 
-- if-else statements
+- if-else statements and switch-case
 - do-while loops
-- input handling
-- type casting
+- input handling and validating `scanf`
+- floating-point types (`double`) and `<math.h>` functions
+- NaN and infinity handling
 - error handling
 - basic Git and GitHub workflow
-```
